@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace War
 {
-    internal class Computer:Player
+    internal class Computer : Player
     {
         private Random random;
 
@@ -22,7 +22,7 @@ namespace War
         public int DrawCard()
         {
             int n = -1;
-            //わからない
+            //わからない　=trueとは？
             while (n < 0)
             {
                 n = random.Next(length);
@@ -31,11 +31,12 @@ namespace War
             }
             cards[n] = true;
             NowOpenCardIndex = n;
-            return n; 
+            return n;
         }
 
         public void CardsClear()
         {
-            Array.Clear(cards, 0, cards.Length);//?
+            Array.Clear(cards, 0, cards.Length);
+        }
     }
 }
